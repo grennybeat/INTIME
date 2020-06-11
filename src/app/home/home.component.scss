@@ -1,0 +1,14 @@
+ion-content{
+    ion-text{
+        h1{
+            margin-left: 15px;
+        }
+        span{
+            margin-right: 15px;
+            font-weight: 300;
+        }
+    }
+    ion-card{
+        min-height: 60vh;
+    }
+}

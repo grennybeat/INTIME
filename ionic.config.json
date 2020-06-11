@@ -1,0 +1,7 @@
+{
+  "name": "INTIME",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

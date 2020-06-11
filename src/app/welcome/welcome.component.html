@@ -1,0 +1,13 @@
+<ion-content [fullscreen]="true" color="primary" >
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>Welcome to <ion-text color="secondary">INTIME</ion-text></ion-card-title>
+      <ion-card-subtitle>Let's know each other :)</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-input (input)="getName($event)" clearInput placeholder="Your name..."></ion-input>
+      <ion-button class="save" expand="block" color="tertiary" (click)="save()" [disabled]="!name">Save</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
