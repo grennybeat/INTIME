@@ -2,15 +2,26 @@
   <ion-text color="dark">
     <h1>Hey {{name}}! <span class="ion-float-right">{{time}}</span></h1>
   </ion-text>
-  <ion-card>
+  <ion-card color="dark">
     <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-title>
+        <ion-text class="form-title">
+          Just tell me how much you got to do today...
+        </ion-text>
+      </ion-card-title>
     </ion-card-header>
-
+    <div class="sep"></div>
     <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      <hr>
+      <ion-item color="dark" lines="none">
+        <ion-label class="input-label" position="fixed">Laps</ion-label>
+        <ion-input placeholder="0-?..." class="form-input" clearInput max="400" min="0" type="number"></ion-input>
+      </ion-item>
+      <ion-item color="dark" lines="none">
+        <ion-label class="input-label" position="fixed">Time</ion-label>
+        <ion-input placeholder="0-18..." class="form-input" clearInput type="number" max="24" min="0"></ion-input>
+      </ion-item>
+      <ion-button class="start-button" color="success" expand="block">Start!</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -2,13 +2,35 @@ ion-content{
     ion-text{
         h1{
             margin-left: 15px;
+            font-size: xx-large;
         }
         span{
             margin-right: 15px;
-            font-weight: 300;
+            font-weight: 500;
+            font-size: xx-large;
         }
     }
     ion-card{
-        min-height: 60vh;
+        min-height: 50vh;
     }
+}
+.input-label{
+    font-size: 2em;
+    font-weight: bolder;
+}
+.form-title{
+    font-size: x-large;
+}
+.form-input{
+    font-size: 2em;
+    font-weight: bolder;
+}
+.start-button{
+    margin-top: 20px;
+    font-size: x-large;
+}
+.sep{
+    border-bottom: 2px solid #c4c5ca;
+    margin-left: 20px;
+    margin-right: 20px;
 }

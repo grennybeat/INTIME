@@ -15,9 +15,10 @@ export class HomeComponent implements OnInit {
   
   constructor() { 
     this.name = localStorage.getItem("name");
+    this.time = new Date().toLocaleTimeString().substring(0,5);
     setInterval(() => {
-      this.time = new Date().toLocaleTimeString();
-   }, 1000);
+      this.time = new Date().toLocaleTimeString().substring(0,5);
+   }, 10000);
   }
 
   ngOnInit() {}
