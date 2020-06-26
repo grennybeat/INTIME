@@ -5,8 +5,8 @@
   <ion-card color="dark">
     <ion-card-header>
       <ion-card-title>
-        <ion-text class="form-title">
-          Just tell me how much you got to do today...
+        <ion-text class="form-title" color="tertiary">
+          How many deliveries?
         </ion-text>
       </ion-card-title>
     </ion-card-header>
@@ -14,14 +14,15 @@
     <ion-card-content>
       <hr>
       <ion-item color="dark" lines="none">
-        <ion-label class="input-label" position="fixed">Laps</ion-label>
-        <ion-input placeholder="0-?..." class="form-input" clearInput max="400" min="0" type="number"></ion-input>
+        <ion-label class="input-label" color="secondary" position="fixed">Laps</ion-label>
+        <ion-input [(ngModel)]="laps" placeholder="0-?..." class="form-input" inputmode="numeric" type="number" [value]="laps" (input)="getLaps($event)"></ion-input>        
       </ion-item>
       <ion-item color="dark" lines="none">
-        <ion-label class="input-label" position="fixed">Time</ion-label>
-        <ion-input placeholder="0-18..." class="form-input" clearInput type="number" max="24" min="0"></ion-input>
+        <ion-label class="input-label" color="secondary" position="fixed">Time</ion-label>
+        <!-- <ion-input placeholder="0-18..." class="form-input" inputmode="numeric" type="number" [value]="lapsTime" (input)="getTime($event)"></ion-input> -->
+        <ion-datetime displayFormat="hh:mm" class="input-label" placeholder="00:00" minuteValues="0,10,15,20,30,40,45,50"></ion-datetime>
       </ion-item>
-      <ion-button class="start-button" color="success" expand="block">Start!</ion-button>
+      <ion-button class="start-button" color="success" expand="block" (click)="start()" [disabled]="!laps || !lapsTime">Start!</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>
